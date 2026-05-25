@@ -1,0 +1,58 @@
+export const doencas = [
+  {
+    id: 1,
+    nome: 'Síndrome de Marfan',
+    categoria: 'Genética',
+    descricao: 'Afeta o tecido conjuntivo do corpo, podendo causar problemas no coração, olhos e esqueleto. Pessoas com Marfan geralmente são altas e têm membros longos.',
+    sintomas: ['Altura acima da média', 'Problemas de visão', 'Dores nas articulações', 'Problemas cardíacos'],
+    prevalencia: '1 em 5.000 pessoas',
+    cor: '#6C3FC5',
+  },
+  {
+    id: 2,
+    nome: 'Doença de Gaucher',
+    categoria: 'Metabólica',
+    descricao: 'Causada pelo acúmulo de substâncias gordurosas em células e órgãos, especialmente baço, fígado e medula óssea.',
+    sintomas: ['Baço e fígado aumentados', 'Anemia', 'Fadiga extrema', 'Dores ósseas'],
+    prevalencia: '1 em 40.000 pessoas',
+    cor: '#E8622A',
+  },
+  {
+    id: 3,
+    nome: 'Fibrose Cística',
+    categoria: 'Genética',
+    descricao: 'Afeta principalmente os pulmões e o sistema digestivo, causando acúmulo de muco espesso que dificulta a respiração e a digestão.',
+    sintomas: ['Tosse persistente', 'Infecções pulmonares frequentes', 'Dificuldade para ganhar peso', 'Suor excessivamente salgado'],
+    prevalencia: '1 em 2.500 nascimentos',
+    cor: '#1D9E75',
+  },
+  {
+    id: 4,
+    nome: 'Esclerose Lateral Amiotrófica',
+    categoria: 'Neurológica',
+    descricao: 'Doença progressiva que afeta os neurônios responsáveis pelo controle dos músculos voluntários, levando à fraqueza muscular progressiva.',
+    sintomas: ['Fraqueza muscular progressiva', 'Dificuldade para falar', 'Dificuldade para engolir', 'Câimbras musculares'],
+    prevalencia: '1 em 50.000 pessoas',
+    cor: '#3B82F6',
+  },
+  {
+    id: 5,
+    nome: 'Síndrome de Turner',
+    categoria: 'Cromossômica',
+    descricao: 'Condição genética que afeta meninas e mulheres, causada pela ausência parcial ou total de um cromossomo X.',
+    sintomas: ['Baixa estatura', 'Pescoço alado', 'Infertilidade', 'Problemas cardíacos'],
+    prevalencia: '1 em 2.500 meninas',
+    cor: '#EC4899',
+  },
+  {
+    id: 6,
+    nome: 'Fenilcetonúria',
+    categoria: 'Metabólica',
+    descricao: 'Erro inato do metabolismo que impede o organismo de processar corretamente o aminoácido fenilalanina, detectável pelo teste do pezinho.',
+    sintomas: ['Atraso no desenvolvimento', 'Convulsões', 'Problemas de comportamento', 'Odor característico na urina'],
+    prevalencia: '1 em 10.000 nascimentos',
+    cor: '#F59E0B',
+  },
+]
+
+export const categorias = ['Todas', 'Genética', 'Metabólica', 'Neurológica', 'Cromossômica']

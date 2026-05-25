@@ -33,5 +33,5 @@ Pacientes com doenças raras enfrentam a "odisseia diagnóstica", demorando em m
 ---
 
 ## 👥 Autoria e Desenvolvimento
-* **Seu Nome** - Estudante de Ciência da Computação
+* **Gisele Santana** - Estudante de Ciência da Computação
 * Projeto desenvolvido para a Competição Universitária de Impacto Social e Inovação - 2026.

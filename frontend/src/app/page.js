@@ -1,24 +1,22 @@
 import Link from 'next/link'
 
-// Dados das estatísticas
 const estatisticas = [
-  { numero: '13 Milhões', descricao: 'Pessoas com doenças raras no Brasil' },
-  { numero: '4 a 7 anos', descricao: 'Tempo médio para diagnóstico correto' },
-  { numero: '75%', descricao: 'Casos se manifestam na infância' },
-  { numero: '+8.000', descricao: 'Doenças raras catalogadas no mundo' },
+  { numero: '13M+', descricao: 'Brasileiros com doenças raras' },
+  { numero: '4-7 anos', descricao: 'Tempo médio para diagnóstico' },
+  { numero: '75%', descricao: 'Casos manifestam na infância' },
+  { numero: '+8.000', descricao: 'Doenças raras catalogadas' },
 ]
 
-// Dados de como funciona
 const comoFunciona = [
   {
     icone: '💬',
     titulo: 'Converse com nossa IA',
-    descricao: 'Descreva seus sintomas em linguagem simples. Nossa IA educativa te orienta com informações acessíveis e sem jargões médicos.',
+    descricao: 'Descreva seus sintomas em linguagem simples. Nossa IA educativa te orienta sem jargões médicos.',
   },
   {
     icone: '📋',
     titulo: 'Receba direcionamento educativo',
-    descricao: 'Com base na conversa, você recebe um resumo educativo com possíveis condições relacionadas e especialistas recomendados.',
+    descricao: 'Você recebe um resumo com informações sobre possíveis condições e especialistas recomendados.',
   },
   {
     icone: '🗺️',
@@ -29,88 +27,74 @@ const comoFunciona = [
 
 export default function Home() {
   return (
-    <main className="bg-[#0F0A1E] min-h-screen">
+    <main className="bg-slate-50 min-h-screen">
 
-      {/* Hero Section */}
-      <section className="min-h-screen flex flex-col items-center justify-center px-6 pt-20 text-center">
-        <p className="text-[#A78BFA] text-sm font-medium tracking-widest uppercase mb-4">
+      {/* Hero */}
+      <section className="min-h-screen flex flex-col items-center justify-center px-6 pt-24 pb-16 text-center bg-gradient-to-br from-indigo-50 via-slate-50 to-violet-50">
+        <span className="inline-block bg-violet-100 text-indigo-700 text-xs font-semibold px-4 py-1.5 rounded-full mb-6 tracking-widest uppercase">
           Plataforma educativa
-        </p>
-        <h1 className="text-[#F0EAF8] text-4xl md:text-6xl font-bold leading-tight mb-6 max-w-3xl">
+        </span>
+        <h1 className="text-slate-900 text-5xl md:text-6xl font-extrabold leading-tight mb-6 max-w-3xl">
           Iluminando jornadas raras.
         </h1>
-        <p className="text-[#9B8EC4] text-lg text-center max-w-xl mb-10 leading-relaxed">
+        <p className="text-slate-600 text-lg max-w-xl mb-10 leading-relaxed">
           LuminaRare reduz a invisibilidade das doenças raras combinando IA,
           educação acessível e direcionamento especializado.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4">
+        <div className="flex flex-col sm:flex-row gap-4 mb-16">
           <Link
             href="/triagem"
-            className="bg-[#E8622A] text-white font-medium px-8 py-4 rounded-xl text-lg hover:opacity-90 transition-opacity"
+            className="bg-indigo-700 text-white font-semibold px-8 py-4 rounded-2xl text-lg hover:bg-indigo-800 transition-colors shadow-md"
           >
             Iniciar Triagem Educativa
           </Link>
           <Link
             href="/biblioteca"
-            className="border border-[#6C3FC5] text-[#A78BFA] font-medium px-8 py-4 rounded-xl text-lg hover:bg-[#6C3FC5]/10 transition-colors"
+            className="bg-white text-indigo-700 font-semibold px-8 py-4 rounded-2xl text-lg border border-indigo-200 hover:bg-indigo-50 transition-colors"
           >
             Explorar Biblioteca
           </Link>
         </div>
-        <p className="text-[#6B5EA0] text-xs mt-16">
+        <p className="text-slate-400 text-xs">
           Esta plataforma não realiza diagnósticos médicos. Projeto LuminaRare.
         </p>
       </section>
 
-      {/* Seção de Estatísticas */}
-      <section className="px-6 py-20 border-t border-[#1E1535]">
+      {/* Estatísticas */}
+      <section className="bg-white border-t border-slate-200 px-6 py-20">
         <div className="max-w-6xl mx-auto">
-          <p className="text-[#A78BFA] text-sm font-medium tracking-widest uppercase text-center mb-4">
+          <span className="block text-center text-indigo-700 text-xs font-semibold tracking-widest uppercase mb-3">
             O problema que enfrentamos
-          </p>
-          <h2 className="text-[#F0EAF8] text-3xl md:text-4xl font-bold text-center mb-16">
+          </span>
+          <h2 className="text-slate-900 text-3xl md:text-4xl font-bold text-center mb-14">
             Doenças raras no Brasil
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {estatisticas.map((item, index) => (
-              <div
-                key={index}
-                className="bg-[#160F2A] border border-[#2D1F54] rounded-2xl p-6 text-center"
-              >
-                <div className="text-[#A78BFA] text-3xl md:text-4xl font-bold mb-2">
-                  {item.numero}
-                </div>
-                <div className="text-[#9B8EC4] text-sm leading-relaxed">
-                  {item.descricao}
-                </div>
+            {estatisticas.map((item, i) => (
+              <div key={i} className="bg-white border border-slate-200 rounded-2xl p-6 text-center shadow-sm">
+                <span className="block text-indigo-700 text-3xl font-bold mb-2">{item.numero}</span>
+                <span className="text-slate-600 text-sm leading-relaxed">{item.descricao}</span>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Seção Como Funciona */}
-      <section className="px-6 py-20 border-t border-[#1E1535]">
+      {/* Como funciona */}
+      <section className="bg-slate-50 border-t border-slate-200 px-6 py-20">
         <div className="max-w-6xl mx-auto">
-          <p className="text-[#A78BFA] text-sm font-medium tracking-widest uppercase text-center mb-4">
+          <span className="block text-center text-indigo-700 text-xs font-semibold tracking-widest uppercase mb-3">
             Como funciona
-          </p>
-          <h2 className="text-[#F0EAF8] text-3xl md:text-4xl font-bold text-center mb-16">
+          </span>
+          <h2 className="text-slate-900 text-3xl md:text-4xl font-bold text-center mb-14">
             Simples, acessível e educativo
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {comoFunciona.map((item, index) => (
-              <div
-                key={index}
-                className="bg-[#160F2A] border border-[#2D1F54] rounded-2xl p-8"
-              >
-                <div className="text-4xl mb-4">{item.icone}</div>
-                <h3 className="text-[#F0EAF8] text-xl font-semibold mb-3">
-                  {item.titulo}
-                </h3>
-                <p className="text-[#9B8EC4] text-sm leading-relaxed">
-                  {item.descricao}
-                </p>
+            {comoFunciona.map((item, i) => (
+              <div key={i} className="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm">
+                <span className="block text-4xl mb-5">{item.icone}</span>
+                <h3 className="text-slate-900 text-xl font-semibold mb-3">{item.titulo}</h3>
+                <p className="text-slate-600 text-sm leading-relaxed">{item.descricao}</p>
               </div>
             ))}
           </div>
@@ -118,18 +102,18 @@ export default function Home() {
       </section>
 
       {/* CTA Final */}
-      <section className="px-6 py-20 border-t border-[#1E1535] text-center">
+      <section className="bg-gradient-to-r from-indigo-700 to-violet-600 px-6 py-20 text-center">
         <div className="max-w-2xl mx-auto">
-          <h2 className="text-[#F0EAF8] text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-white text-3xl md:text-4xl font-bold mb-5">
             Sua jornada começa aqui.
           </h2>
-          <p className="text-[#9B8EC4] text-lg mb-10 leading-relaxed">
-            Ninguém deveria enfrentar anos de incerteza sozinho. O LuminaRare
-            está aqui para iluminar o caminho.
+          <p className="text-indigo-100 text-lg mb-10 leading-relaxed">
+            Ninguém deveria enfrentar anos de incerteza sozinho.
+            O LuminaRare está aqui para iluminar o caminho.
           </p>
           <Link
             href="/triagem"
-            className="bg-[#E8622A] text-white font-medium px-10 py-4 rounded-xl text-lg hover:opacity-90 transition-opacity"
+            className="bg-white text-indigo-700 font-bold px-10 py-4 rounded-2xl text-lg hover:bg-indigo-50 transition-colors shadow-md inline-block"
           >
             Começar agora — é gratuito
           </Link>
@@ -137,20 +121,18 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-[#1E1535] px-6 py-10">
+      <footer className="bg-white border-t border-slate-200 px-6 py-10">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex items-center gap-2">
-            <div className="w-6 h-6 bg-[#6C3FC5] rounded-md flex items-center justify-center">
+            <div className="w-7 h-7 bg-indigo-700 rounded-lg flex items-center justify-center">
               <span className="text-white text-xs font-bold">L</span>
             </div>
-            <span className="text-[#F0EAF8] font-semibold">LuminaRare</span>
+            <span className="text-slate-900 font-semibold">LuminaRare</span>
           </div>
-          <p className="text-[#6B5EA0] text-xs text-center">
-            Esta plataforma é estritamente educativa e não realiza diagnósticos médicos.
+          <p className="text-slate-400 text-xs text-center">
+            Plataforma estritamente educativa. Não realiza diagnósticos médicos.
           </p>
-          <p className="text-[#6B5EA0] text-xs">
-            © 2026 LuminaRare. Projeto universitário.
-          </p>
+          <p className="text-slate-400 text-xs">© 2026 LuminaRare</p>
         </div>
       </footer>
 

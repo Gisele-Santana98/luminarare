@@ -1,12 +1,13 @@
+import Header from "@/components/layout/Header"
+import Hero from "@/components/layout/Hero"
+import Stats from "@/components/layout/Stats"
+
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#F8FAFC] flex flex-col items-center justify-center">
-      <h1 className="text-4xl font-bold text-[#4338CA]">
-        LuminaRare
-      </h1>
-      <p className="text-[#475569] mt-4 text-lg">
-        Iluminando jornadas invisíveis
-      </p>
+    <main className="min-h-screen bg-[#F8FAFC]">
+      <Header />
+      <Hero />
+      <Stats />
     </main>
   )
 }

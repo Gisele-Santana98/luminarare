@@ -1,37 +1,36 @@
-# LuminaRare 🌟
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-> Iluminando jornadas raras.
+## Getting Started
 
-LuminaRare reduz a invisibilidade das doenças raras combinando IA, educação acessível e direcionamento especializado — para que ninguém enfrente essa jornada sozinho.
+First, run the development server:
 
----
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-## 🎯 O Problema & Impacto Social
-Pacientes com doenças raras enfrentam a "odisseia diagnóstica", demorando em média de 4 a 7 anos para obter um diagnóstico correto no Brasil. O LuminaRare atua na conscientização e triagem educativa primária, reduzindo a distância entre os primeiros sintomas e a busca por ajuda médica especializada.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-* **Nota Ética:** Esta plataforma é estritamente informativa, educativa e preventiva. **Não realiza diagnósticos médicos** e não substitui a consulta com um profissional de saúde.
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
----
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## 🚀 Funcionalidades do MVP (Escopo Concluído/Em Desenvolvimento)
-- [ ] **Landing Page Institucional:** Estatísticas, proposta de valor e conscientização pública.
-- [ ] **Chatbot Educativo com IA:** Orientador conversacional integrado (Linguagem Simples) com avisos de limites éticos.
-- [ ] **Triagem Educativa:** Formulário guiado para mapeamento preliminar de sintomas e direcionamento.
-- [ ] **Rede de Apoio:** Mapeamento de hospitais, ONGs, associações e centros especializados.
-- [ ] **Dashboard de Conscientização:** Gráficos interativos sobre a distribuição e dados de doenças raras.
-- [ ] **Biblioteca Inteligente:** Catálogo com filtros avançados, tags e sintomas relacionados.
-- [ ] **Acessibilidade Universal:** Contraste, ajuste de fonte e compatibilidade com leitores de tela (Diretrizes WCAG).
+## Learn More
 
----
+To learn more about Next.js, take a look at the following resources:
 
-## 🛠️ Stack Tecnológica
-* **Frontend & Backend (BFF):** Next.js (React) com App Router.
-* **Estilização:** Tailwind CSS (Interface moderna, responsiva e acessível).
-* **Banco de Dados:** MongoDB (Flexibilidade para esquemas de dados complexos de sintomas).
-* **Inteligência Artificial:** API de IA para processamento de linguagem natural.
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
----
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## 👥 Autoria e Desenvolvimento
-* **Gisele Santana** - Estudante de Ciência da Computação
-* Projeto desenvolvido para a Competição Universitária de Impacto Social e Inovação - 2026.
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

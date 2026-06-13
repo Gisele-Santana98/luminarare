@@ -1,6 +1,7 @@
 import Header from "@/components/layout/Header"
 import Hero from "@/components/layout/Hero"
 import Stats from "@/components/layout/Stats"
+import Features from "@/components/layout/Features"
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Header />
       <Hero />
       <Stats />
+      <Features />
     </main>
   )
 }

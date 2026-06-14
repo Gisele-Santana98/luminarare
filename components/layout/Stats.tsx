@@ -1,8 +1,8 @@
 const stats = [
-  { numero: "300+", label: "Doenças catalogadas" },
-  { numero: "8M+", label: "Brasileiros afetados" },
-  { numero: "5+", label: "Anos de jornada média até diagnóstico" },
-  { numero: "95%", label: "Sem diagnóstico definido" },
+  { numero: "1 em 17", label: "pessoas tem uma doença rara no mundo" },
+  { numero: "13M+", label: "brasileiros afetados por doenças raras" },
+  { numero: "4 a 7 anos", label: "média de espera até o diagnóstico correto" },
+  { numero: "8.000+", label: "doenças raras catalogadas no mundo" },
 ]
 
 export default function Stats() {

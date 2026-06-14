@@ -11,7 +11,7 @@ export default function Footer() {
             <span className="text-white font-bold text-lg">LuminaRare</span>
           </div>
           <p className="text-[#94A3B8] text-sm max-w-xs leading-relaxed">
-            Plataforma educativa de conscientização sobre doenças raras.
+            Iluminando jornadas raras.Plataforma educativa de conscientização sobre doenças raras.
             Não realizamos diagnósticos médicos.
           </p>
         </div>

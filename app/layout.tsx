@@ -1,11 +1,18 @@
 import type { Metadata } from "next"
-import { Geist } from "next/font/google"
+import { Poppins, Inter } from "next/font/google"
 import "./globals.css"
 import "leaflet/dist/leaflet.css"
 
-const geist = Geist({
-  variable: "--font-geist-sans",
+const poppins = Poppins({
+  variable: "--font-poppins",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+})
+
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
 })
 
 export const metadata: Metadata = {
@@ -19,8 +26,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="pt-BR" className={`${geist.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="pt-BR" className={`${poppins.variable} ${inter.variable} h-full antialiased`}>
+      <body className="min-h-full flex flex-col bg-slate-50">{children}</body>
     </html>
   )
 }

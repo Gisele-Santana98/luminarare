@@ -1,6 +1,8 @@
 @import "tailwindcss";
 
 :root {
+  --font-heading: var(--font-poppins);
+  --font-body: var(--font-inter);
   --color-primary: #4338CA;
   --color-primary-light: #6366F1;
   --color-secondary: #EDE9FE;
@@ -20,5 +22,10 @@
 body {
   background-color: var(--color-background);
   color: var(--color-text-main);
+  font-family: var(--font-inter), sans-serif;
   -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-poppins), sans-serif;
 }

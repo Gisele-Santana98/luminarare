@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+✦ LuminaRare
 
-## Getting Started
+Iluminando jornadas raras
+Plataforma educativa de conscientização sobre doenças raras no Brasil.
+Informação acessível. Apoio especializado. Empatia em cada detalhe.
 
-First, run the development server:
+🌟 Sobre o Projeto
 
-```bash
+1 em cada 17 pessoas no mundo tem uma doença rara.
+No Brasil, são mais de 13 milhões de brasileiros — e a maioria espera em média 5 anos até receber um diagnóstico.
+
+O LuminaRare nasceu para transformar essa realidade. Uma plataforma 100% educativa que conecta pessoas a informações confiáveis, redes de apoio e ferramentas interativas — de forma simples, acolhedora e acessível.
+
+🚀 Funcionalidades
+
+📚 Biblioteca de DoençasBusca e filtros por categoria com cards informativos sobre doenças raras
+🤖 Assistente com IAChatbot educativo integrado ao Google Gemini com histórico de conversa
+🗺️ Rede de ApoioMapa interativo com hospitais, associações e centros especializados no Brasil
+🧭 Jornada InvisívelExperiência interativa para gerar empatia sobre a realidade de quem vive com doenças raras
+
+
+🛠️ Tecnologias
+
+Frontend     →  Next.js 16 (App Router) · React 19 · TypeScript · Tailwind CSS v4
+IA           →  Google Gemini API
+Mapa         →  React Leaflet · OpenStreetMap
+Deploy       →  Vercel (frontend) · Render (backend)
+
+
+📁 Estrutura do Projeto
+
+luminarare/
+├── app/
+│   ├── page.tsx              # Home
+│   ├── biblioteca/           # Biblioteca de doenças raras
+│   ├── chatbot/              # Assistente com IA
+│   ├── jornada/              # Jornada Invisível
+│   ├── rede-de-apoio/        # Mapa de apoio
+│   └── api/chat/             # Route handler Gemini
+├── components/
+│   └── layout/
+│       ├── Header.tsx
+│       ├── Hero.tsx
+│       ├── Features.tsx
+│       ├── Impact.tsx
+│       ├── CTA.tsx
+│       └── Footer.tsx
+└── lib/
+    ├── doencas.ts            # Dados das doenças raras
+    └── rede-apoio.ts         # Dados da rede de apoio
+
+
+⚙️ Como Rodar Localmente
+
+bash# Clone o repositório
+git clone https://github.com/seu-usuario/luminarare.git
+cd luminarare
+
+# Instale as dependências
+npm install
+
+# Configure as variáveis de ambiente
+cp .env.example .env.local
+# Adicione sua GEMINI_API_KEY no .env.local
+
+# Rode o projeto
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Acesse: http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+🔑 Variáveis de Ambiente
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+envGEMINI_API_KEY=sua_chave_aqui
 
-## Learn More
+⚠️ Aviso Importante
 
-To learn more about Next.js, take a look at the following resources:
+O LuminaRare possui caráter exclusivamente educativo.
+As informações disponibilizadas não substituem consulta, diagnóstico ou acompanhamento médico profissional.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+👩‍💻 Desenvolvido por
 
-## Deploy on Vercel
+Gisele — Projeto desenvolvido com foco em conscientização e impacto social.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+<div align="center">
+© 2026 LuminaRare · Todos os direitos reservados
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Desenvolvido para conscientização e impacto social 💜
+
+</div>

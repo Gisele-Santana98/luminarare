@@ -1,6 +1,7 @@
 # ✦ LuminaRare
 
 Iluminando jornadas raras
+
 Plataforma educativa de conscientização sobre doenças raras no Brasil.
 Informação acessível. Apoio especializado. Empatia em cada detalhe.
 

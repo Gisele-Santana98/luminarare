@@ -1,7 +1,7 @@
 export type InstituicaoApoio = {
   id: number
   nome: string
-  tipo: "Hospital" | "Associacao" | "Centro Especializado"
+  tipo: "Hospital" | "Associação" | "Centro Especializado"
   cidade: string
   estado: string
   telefone: string
@@ -36,7 +36,7 @@ export const instituicoes: InstituicaoApoio[] = [
   {
     id: 3,
     nome: "Associacao Brasileira de Doencas Raras",
-    tipo: "Associacao",
+    tipo: "Associação",
     cidade: "Sao Paulo",
     estado: "SP",
     telefone: "(11) 3392-8090",
@@ -58,7 +58,7 @@ export const instituicoes: InstituicaoApoio[] = [
   {
     id: 5,
     nome: "Associacao dos Portadores de Fibrose Cistica",
-    tipo: "Associacao",
+    tipo: "Associação",
     cidade: "Sao Paulo",
     estado: "SP",
     telefone: "(11) 5572-5614",
@@ -91,7 +91,7 @@ export const instituicoes: InstituicaoApoio[] = [
   {
     id: 8,
     nome: "Associacao Brasileira de Esclerose Lateral Amiotrofica",
-    tipo: "Associacao",
+    tipo: "Associação",
     cidade: "Sao Paulo",
     estado: "SP",
     telefone: "(11) 5044-8900",

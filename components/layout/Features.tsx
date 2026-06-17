@@ -1,59 +1,110 @@
+import Link from "next/link"
+
 const features = [
   {
     icone: "🔍",
     titulo: "Triagem Educativa",
-    descricao: "Responda perguntas e receba orientação sobre conteúdos relacionados aos seus sintomas.",
+    descricao:
+      "Responda perguntas e receba orientações sobre conteúdos relacionados aos seus sintomas.",
+    link: "https://forms.gle/R53NTTgoSU9L5xd29",
+    target: "_blank",
+    rel: "noopener noreferrer",
   },
   {
     icone: "🤖",
     titulo: "Assistente com IA",
-    descricao: "Tire dúvidas sobre doenças raras com linguagem simples e acolhedora.",
+    descricao:
+      "Tire dúvidas sobre doenças raras com linguagem simples, acolhedora e baseada em informações educativas.",
+    link: "/chatbot",
+    target: "_blank",
+    rel: "noopener noreferrer",
   },
   {
     icone: "📚",
     titulo: "Biblioteca de Doenças",
-    descricao: "Conteúdo educativo sobre mais de 300 doenças raras com linguagem acessível.",
+    descricao:
+      "Explore conteúdos educativos sobre doenças raras em uma linguagem acessível e confiável.",
+    link: "/biblioteca",
   },
   {
     icone: "🗺️",
     titulo: "Rede de Apoio",
-    descricao: "Encontre hospitais, associações e centros especializados próximos a você.",
+    descricao:
+      "Encontre hospitais, associações e centros especializados em doenças raras em todo o Brasil.",
+    link: "/rede-de-apoio",
   },
 ]
 
 export default function Features() {
   return (
-    <section id="doencas" className="py-20 px-6 bg-[#F8FAFC]">
+    <section
+      id="doencas"
+      className="py-24 px-6 bg-gradient-to-b from-slate-50 to-white"
+    >
       <div className="max-w-7xl mx-auto">
-
-        <div className="text-center mb-12">
-          <span className="bg-[#EDE9FE] text-[#4338CA] text-sm font-medium px-4 py-1 rounded-full">
+        <div className="text-center mb-14">
+          <span className="bg-violet-100 text-indigo-700 text-sm font-medium px-4 py-2 rounded-full">
             O que oferecemos
           </span>
-          <h2 className="text-3xl font-bold text-[#0F172A] mt-4">
-            Nossas funcionalidades
+
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mt-5">
+            Funcionalidades da Plataforma
           </h2>
-          <p className="text-[#475569] mt-3 max-w-xl mx-auto">
-            Ferramentas educativas para reduzir a distância entre sintomas e informação.
+
+          <p className="text-slate-600 mt-4 max-w-2xl mx-auto text-lg">
+            Ferramentas educativas desenvolvidas para ampliar o acesso à
+            informação, conscientização e apoio sobre doenças raras.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
           {features.map((item) => (
             <div
               key={item.titulo}
-              className="bg-white rounded-2xl p-6 flex flex-col gap-4 border border-[#E2E8F0] hover:border-[#4338CA] hover:shadow-md transition-all"
+              className="
+                bg-white
+                rounded-3xl
+                p-7
+                border
+                border-slate-100
+                shadow-sm
+                hover:shadow-xl
+                hover:-translate-y-1
+                hover:border-indigo-200
+                transition-all
+                duration-300
+                flex
+                flex-col
+                gap-4
+              "
             >
-              <span className="text-3xl">{item.icone}</span>
-              <h3 className="text-[#0F172A] font-semibold text-lg">{item.titulo}</h3>
-              <p className="text-[#475569] text-sm leading-relaxed">{item.descricao}</p>
-              <a href="#" className="text-[#4338CA] text-sm font-medium mt-auto hover:underline">
-                Ver mais →
-              </a>
+              <div className="w-14 h-14 rounded-2xl bg-violet-100 flex items-center justify-center text-3xl">
+                {item.icone}
+              </div>
+
+              <h3 className="text-slate-900 font-bold text-xl">
+                {item.titulo}
+              </h3>
+
+              <p className="text-slate-600 text-sm leading-relaxed flex-grow">
+                {item.descricao}
+              </p>
+
+              <Link
+                href={item.link}
+                className="
+                  text-indigo-700
+                  text-sm
+                  font-semibold
+                  hover:translate-x-1
+                  transition-all
+                "
+              >
+                Acessar →
+              </Link>
             </div>
           ))}
         </div>
-
       </div>
     </section>
   )

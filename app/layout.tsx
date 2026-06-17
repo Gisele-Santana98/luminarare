@@ -6,18 +6,44 @@ import "leaflet/dist/leaflet.css"
 const poppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
+  display: "swap",
   weight: ["400", "500", "600", "700", "800"],
 })
 
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
+  display: "swap",
   weight: ["400", "500", "600"],
 })
 
 export const metadata: Metadata = {
-  title: "LuminaRare — Iluminando jornadas raras",
-  description: "Plataforma educativa de conscientizacao sobre doencas raras. Informacao acessivel, acolhimento e rede de apoio.",
+  title: "LuminaRare — Iluminando Jornadas Raras",
+  description:
+    "Plataforma educativa de conscientização sobre doenças raras. Informação acessível, acolhimento, orientação e rede de apoio.",
+  keywords: [
+    "doenças raras",
+    "saúde",
+    "educação em saúde",
+    "conscientização",
+    "pacientes",
+    "rede de apoio",
+    "doenças genéticas",
+    "assistente IA",
+    "LuminaRare",
+  ],
+  authors: [
+    {
+      name: "Equipe LuminaRare",
+    },
+  ],
+  openGraph: {
+    title: "LuminaRare — Iluminando Jornadas Raras",
+    description:
+      "Informação acessível, acolhimento e conscientização sobre doenças raras.",
+    type: "website",
+    locale: "pt_BR",
+  },
 }
 
 export default function RootLayout({
@@ -26,8 +52,14 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="pt-BR" className={`${poppins.variable} ${inter.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col bg-slate-50">{children}</body>
+    <html
+      lang="pt-BR"
+      className={`${poppins.variable} ${inter.variable}`}
+      suppressHydrationWarning
+    >
+      <body className="min-h-screen flex flex-col bg-slate-50 text-slate-900 antialiased">
+        {children}
+      </body>
     </html>
   )
 }

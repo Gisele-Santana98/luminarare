@@ -1,17 +1,17 @@
-✦ LuminaRare
+# ✦ LuminaRare
 
 Iluminando jornadas raras
 Plataforma educativa de conscientização sobre doenças raras no Brasil.
 Informação acessível. Apoio especializado. Empatia em cada detalhe.
 
-🌟 Sobre o Projeto
+# 🌟 Sobre o Projeto
 
 1 em cada 17 pessoas no mundo tem uma doença rara.
 No Brasil, são mais de 13 milhões de brasileiros — e a maioria espera em média 5 anos até receber um diagnóstico.
 
 O LuminaRare nasceu para transformar essa realidade. Uma plataforma 100% educativa que conecta pessoas a informações confiáveis, redes de apoio e ferramentas interativas — de forma simples, acolhedora e acessível.
 
-🚀 Funcionalidades
+# 🚀 Funcionalidades
 
 📚 Biblioteca de DoençasBusca e filtros por categoria com cards informativos sobre doenças raras
 🤖 Assistente com IAChatbot educativo integrado ao Google Gemini com histórico de conversa
@@ -25,29 +25,6 @@ Frontend     →  Next.js 16 (App Router) · React 19 · TypeScript · Tailwind 
 IA           →  Google Gemini API
 Mapa         →  React Leaflet · OpenStreetMap
 Deploy       →  Vercel (frontend) · Render (backend)
-
-
-📁 Estrutura do Projeto
-
-luminarare/
-├── app/
-│   ├── page.tsx              # Home
-│   ├── biblioteca/           # Biblioteca de doenças raras
-│   ├── chatbot/              # Assistente com IA
-│   ├── jornada/              # Jornada Invisível
-│   ├── rede-de-apoio/        # Mapa de apoio
-│   └── api/chat/             # Route handler Gemini
-├── components/
-│   └── layout/
-│       ├── Header.tsx
-│       ├── Hero.tsx
-│       ├── Features.tsx
-│       ├── Impact.tsx
-│       ├── CTA.tsx
-│       └── Footer.tsx
-└── lib/
-    ├── doencas.ts            # Dados das doenças raras
-    └── rede-apoio.ts         # Dados da rede de apoio
 
 
 ⚙️ Como Rodar Localmente

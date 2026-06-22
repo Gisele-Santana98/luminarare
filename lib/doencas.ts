@@ -252,4 +252,180 @@ export const doencas: Doenca[] = [
     curiosidade:
       "Algumas teorias históricas relacionam sintomas da porfiria a lendas sobre vampiros.",
   },
+  
+  {
+    id: 9,
+    nome: "Doença de Huntington",
+    categoria: "Neurológica",
+    descricao:
+      "Doença genética hereditária que causa deterioração progressiva das células nervosas no cérebro, afetando movimentos, cognição e comportamento.",
+    sintomas: [
+      "Movimentos involuntários (coreia)",
+      "Declínio cognitivo progressivo",
+      "Alterações de humor e comportamento",
+      "Dificuldade para falar e engolir",
+    ],
+    prevalencia: "3 a 7 em cada 100.000 pessoas",
+    quandoProcurarAjuda:
+      "Quando houver histórico familiar da doença ou início de movimentos involuntários e alterações cognitivas.",
+    especialista: "Neurologista e geneticista.",
+    tratamento:
+      "Não há cura; o tratamento foca no controle dos sintomas com medicamentos e suporte multidisciplinar.",
+    curiosidade:
+      "Cada filho de uma pessoa com Huntington tem 50% de chance de herdar o gene da doença.",
+  },
+
+  {
+    id: 10,
+    nome: "Síndrome de Rett",
+    categoria: "Neurológica",
+    descricao:
+      "Transtorno neurológico raro que afeta quase exclusivamente meninas, causando regressão no desenvolvimento após um período inicial normal.",
+    sintomas: [
+      "Perda de habilidades manuais adquiridas",
+      "Movimentos repetitivos das mãos",
+      "Dificuldades de comunicação",
+      "Problemas de coordenação motora",
+    ],
+    prevalencia: "1 em cada 10.000 meninas",
+    quandoProcurarAjuda:
+      "Quando houver regressão no desenvolvimento entre 6 meses e 2 anos de idade.",
+    especialista: "Neuropediatra e geneticista.",
+    tratamento:
+      "Suporte multidisciplinar com fisioterapia, fonoaudiologia e terapia ocupacional.",
+    curiosidade:
+      "A síndrome foi descrita pela primeira vez pelo médico austríaco Andreas Rett em 1966.",
+  },
+
+  {
+    id: 11,
+    nome: "Acondroplasia",
+    categoria: "Genética",
+    descricao:
+      "Forma mais comum de nanismo, causada por uma mutação genética que afeta o desenvolvimento ósseo.",
+    sintomas: [
+      "Estatura baixa",
+      "Membros curtos em relação ao tronco",
+      "Cabeça maior que o habitual",
+      "Curvatura acentuada da coluna",
+    ],
+    prevalencia: "1 em cada 25.000 nascimentos",
+    quandoProcurarAjuda:
+      "O diagnóstico pode ocorrer ainda na gestação por ultrassonografia.",
+    especialista: "Geneticista e ortopedista.",
+    tratamento:
+      "Acompanhamento ortopédico, fisioterapia e suporte ao desenvolvimento motor.",
+    curiosidade:
+      "Cerca de 80% dos casos ocorrem em filhos de pais com estatura típica, por mutação espontânea.",
+  },
+
+  {
+    id: 12,
+    nome: "Esclerodermia",
+    categoria: "Autoimune",
+    descricao:
+      "Doença autoimune crônica que causa endurecimento e espessamento da pele e pode afetar órgãos internos.",
+    sintomas: [
+      "Endurecimento da pele",
+      "Fenômeno de Raynaud",
+      "Dificuldade para engolir",
+      "Fadiga intensa",
+    ],
+    prevalencia: "1 em cada 10.000 pessoas",
+    quandoProcurarAjuda:
+      "Quando houver endurecimento progressivo da pele associado a sensibilidade ao frio nas extremidades.",
+    especialista: "Reumatologista.",
+    tratamento:
+      "Controle dos sintomas com imunossupressores, vasodilatadores e acompanhamento contínuo.",
+    curiosidade:
+      "A doença afeta mais mulheres do que homens, numa proporção de 4 para 1.",
+  },
+
+  {
+    id: 13,
+    nome: "Síndrome de Prader-Willi",
+    categoria: "Genética",
+    descricao:
+      "Condição genética rara que causa hipotonia na infância, deficiência intelectual e fome insaciável na fase adulta.",
+    sintomas: [
+      "Hipotonia neonatal",
+      "Fome compulsiva e constante",
+      "Obesidade",
+      "Deficiência intelectual leve a moderada",
+    ],
+    prevalencia: "1 em cada 15.000 pessoas",
+    quandoProcurarAjuda:
+      "Quando houver hipotonia severa ao nascimento ou ganho de peso excessivo na infância.",
+    especialista: "Geneticista, endocrinologista e neuropediatra.",
+    tratamento:
+      "Controle alimentar rigoroso, terapia com hormônio do crescimento e suporte multidisciplinar.",
+    curiosidade:
+      "Pessoas com a síndrome nunca sentem saciedade, o que exige supervisão alimentar constante.",
+  },
+
+  {
+    id: 14,
+    nome: "Doença de Gaucher",
+    categoria: "Metabólica",
+    descricao:
+      "Doença de depósito lisossômico causada pela deficiência de uma enzima que resulta no acúmulo de substâncias gordurosas em órgãos.",
+    sintomas: [
+      "Aumento do fígado e baço",
+      "Anemia",
+      "Fadiga",
+      "Dores ósseas",
+    ],
+    prevalencia: "1 em cada 40.000 pessoas",
+    quandoProcurarAjuda:
+      "Quando houver aumento abdominal inexplicável associado a anemia e dores ósseas.",
+    especialista: "Hematologista e geneticista.",
+    tratamento:
+      "Terapia de reposição enzimática disponível no SUS para casos elegíveis.",
+    curiosidade:
+      "É a doença de depósito lisossômico mais comum no mundo.",
+  },
+
+  {
+    id: 15,
+    nome: "Miastenia Gravis",
+    categoria: "Autoimune",
+    descricao:
+      "Doença autoimune que afeta a junção neuromuscular, causando fraqueza muscular flutuante e fadiga.",
+    sintomas: [
+      "Ptose palpebral (queda das pálpebras)",
+      "Visão dupla",
+      "Fraqueza nos membros",
+      "Dificuldade para falar e mastigar",
+    ],
+    prevalencia: "2 em cada 10.000 pessoas",
+    quandoProcurarAjuda:
+      "Quando houver fraqueza muscular que piora com o esforço e melhora com o repouso.",
+    especialista: "Neurologista.",
+    tratamento:
+      "Inibidores da colinesterase, imunossupressores e, em alguns casos, timectomia.",
+    curiosidade:
+      "Os sintomas tendem a piorar ao longo do dia e melhorar após descanso.",
+  },
+
+  {
+    id: 16,
+    nome: "Osteogênese Imperfeita",
+    categoria: "Genética",
+    descricao:
+      "Conhecida como 'doença dos ossos de vidro', causa fragilidade óssea extrema por defeito na produção de colágeno.",
+    sintomas: [
+      "Fraturas frequentes com traumas mínimos",
+      "Baixa estatura",
+      "Escleróticas azuladas",
+      "Perda auditiva progressiva",
+    ],
+    prevalencia: "1 em cada 15.000 a 20.000 pessoas",
+    quandoProcurarAjuda:
+      "Quando houver fraturas recorrentes sem trauma proporcional, especialmente na infância.",
+    especialista: "Ortopedista e geneticista.",
+    tratamento:
+      "Bifosfonatos, fisioterapia, cirurgias ortopédicas e suporte multidisciplinar.",
+    curiosidade:
+      "Existem pelo menos 8 tipos da doença, com graus variados de gravidade.",
+  },
 ]

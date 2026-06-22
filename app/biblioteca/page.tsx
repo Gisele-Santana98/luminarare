@@ -1,20 +1,26 @@
 "use client"
 
-import { useState, useMemo, useEffect, useRef } from "react"
+import { useState, useMemo, useEffect, useRef, Suspense } from "react"
+import { useSearchParams } from "next/navigation"
 import { doencas } from "@/lib/doencas"
 import Header from "@/components/layout/Header"
 import Footer from "@/components/layout/Footer"
 
-export default function BibliotecaPage() {
-  const [busca, setBusca] = useState("")
-  const [categoria, setCategoria] = useState("Todas")
-  const [doencaSelecionada, setDoencaSelecionada] = useState<number | null>(null)
-  const modalRef = useRef<HTMLDivElement>(null)
+function BibliotecaContent() {
+  const searchParams = useSearchParams()
+  const categoriaUrl = searchParams.get("categoria")
 
-  const categorias = useMemo(() => {
-    const unicas = Array.from(new Set(doencas.map((d) => d.categoria)))
-    return ["Todas", ...unicas.sort()]
-  }, [])
+ const categorias = useMemo(() => {
+  const unicas = Array.from(new Set(doencas.map((d) => d.categoria)))
+  return ["Todas", ...unicas.sort()]
+}, [])
+
+const [busca, setBusca] = useState("")
+const [categoria, setCategoria] = useState(
+  () => (categoriaUrl && categorias.includes(categoriaUrl) ? categoriaUrl : "Todas")
+)
+const [doencaSelecionada, setDoencaSelecionada] = useState<number | null>(null)
+const modalRef = useRef<HTMLDivElement>(null)
 
   const filtradas = useMemo(() => {
     return doencas.filter((d) => {
@@ -72,6 +78,12 @@ export default function BibliotecaPage() {
               <p className="text-slate-500 text-sm">Doenças disponíveis</p>
             </div>
           </div>
+
+          {categoriaUrl && (
+            <div className="bg-violet-50 border border-violet-200 rounded-2xl px-5 py-3 text-sm text-indigo-700 max-w-2xl mx-auto text-center">
+              Filtro pré-selecionado com base na sua Triagem: <strong>{categoriaUrl}</strong>
+            </div>
+          )}
 
           {/* Busca + filtros */}
           <div className="bg-white rounded-3xl border border-slate-200 p-6 shadow-md">
@@ -227,5 +239,13 @@ export default function BibliotecaPage() {
 
       <Footer />
     </main>
+  )
+}
+
+export default function BibliotecaPage() {
+  return (
+    <Suspense fallback={null}>
+      <BibliotecaContent />
+    </Suspense>
   )
 }

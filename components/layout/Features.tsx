@@ -6,9 +6,7 @@ const features = [
     titulo: "Triagem Educativa",
     descricao:
       "Responda perguntas e receba orientações sobre conteúdos relacionados aos seus sintomas.",
-    link: "https://forms.gle/R53NTTgoSU9L5xd29",
-    target: "_blank",
-    rel: "noopener noreferrer",
+    link: "/triagem",
   },
   {
     icone: "🤖",

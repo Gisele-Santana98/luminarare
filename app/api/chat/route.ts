@@ -35,6 +35,8 @@ function isHistoricoValido(m: unknown): m is MensagemHistorico {
   )
 }
 
+const MODELOS_FALLBACK = ["gemini-2.5-flash", "gemini-2.0-flash", "gemini-2.0-flash-lite"]
+
 export async function POST(req: NextRequest) {
   const apiKey = process.env.GEMINI_API_KEY
 
@@ -58,21 +60,41 @@ export async function POST(req: NextRequest) {
 
     const genAI = new GoogleGenerativeAI(apiKey)
 
+    const historicoFiltrado: MensagemHistorico[] = Array.isArray(historico)
+  ? historico.filter(isHistoricoValido).slice(-20)
+  : []
+
+// Garante que o histórico comece com role "user" (exigência da API Gemini)
+const primeiroIndiceUser = historicoFiltrado.findIndex((m) => m.role === "user")
+const historicoCorrigido =
+  primeiroIndiceUser === -1 ? [] : historicoFiltrado.slice(primeiroIndiceUser)
+
+let resposta: string | null = null
+let ultimoErro: unknown = null
+
+for (const nomeModelo of MODELOS_FALLBACK) {
+  try {
     const model = genAI.getGenerativeModel({
-      model: "gemini-2.0-flash-lite",
+      model: nomeModelo,
       systemInstruction: instrucao,
     })
 
-    const historicoFiltrado: MensagemHistorico[] = Array.isArray(historico)
-      ? historico.filter(isHistoricoValido).slice(-20)
-      : []
-
     const chat = model.startChat({
-      history: historicoFiltrado,
+      history: historicoCorrigido,
     })
 
     const result = await chat.sendMessage(mensagem.trim())
-    const resposta = result.response.text()
+    resposta = result.response.text()
+    break
+  } catch (erroModelo) {
+    ultimoErro = erroModelo
+    continue
+  }
+}
+
+    if (!resposta) {
+      throw ultimoErro || new Error("Todos os modelos falharam.")
+    }
 
     return NextResponse.json({ resposta })
   } catch (error) {

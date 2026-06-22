@@ -46,7 +46,7 @@ const modalRef = useRef<HTMLDivElement>(null)
   }, [doencaSelecionada])
 
   return (
-    <main className="min-h-screen bg-slate-50 relative overflow-hidden">
+    <main className="min-h-screen bg-gradient-to-b from-violet-100 via-violet-50 to-violet-100 relative overflow-hidden">
       <div className="absolute top-0 right-0 w-[28rem] h-[28rem] bg-violet-200 rounded-full blur-3xl opacity-20 -translate-y-1/3 translate-x-1/3 pointer-events-none" />
       <div className="absolute top-[40rem] left-0 w-80 h-80 bg-emerald-200 rounded-full blur-3xl opacity-15 -translate-x-1/2 pointer-events-none" />
 

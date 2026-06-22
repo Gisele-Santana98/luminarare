@@ -34,7 +34,7 @@ export default function RedeDeApoioPage() {
   )
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-slate-50 via-white to-slate-50">
+    <main className="min-h-screen bg-gradient-to-b from-slate-50 via-white to-slate-50bg-gradient-to-b from-violet-100 via-violet-50 to-violet-100 relative overflow-hidden">
       <Header />
 
       <section className="py-16 px-6">
@@ -53,6 +53,7 @@ export default function RedeDeApoioPage() {
               Hospitais, associações e centros especializados em doenças raras
               para ajudar pacientes, familiares e cuidadores em todo o Brasil.
             </p>
+            <p className="text-xs text-slate-600 mt-1"> As informações de contato podem estar sujeitas a alterações. Confirme os dados diretamente no site de cada instituição.</p>
           </div>
 
           <div className="rounded-3xl overflow-hidden border border-slate-200 shadow-sm bg-white">

@@ -2,7 +2,7 @@ import Link from "next/link"
 
 export default function Hero() {
   return (
-    <section className="relative bg-gradient-to-b from-violet-50 via-white to-slate-50 pt-24 pb-32 overflow-hidden">
+    <section className="relative bg-gradient-to-b from-violet-100 via-violet-50 to-white pt-24 pb-32 overflow-hidden">
 
       <div className="absolute top-0 right-0 w-96 h-96 bg-violet-200 rounded-full blur-3xl opacity-30 -translate-y-1/2 translate-x-1/2" />
 
@@ -16,7 +16,7 @@ export default function Hero() {
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-slate-900 leading-tight">
             Sua jornada
             <span className="block bg-gradient-to-r from-indigo-700 to-violet-500 bg-clip-text text-transparent">
-              merece ter nome.
+              merece ter nome
             </span>
           </h1>
 

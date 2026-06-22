@@ -9,7 +9,7 @@ const dados = [
 
 export default function Impact() {
   return (
-    <section className="py-20 px-6 bg-[#EDE9FE]">
+    <section className="py-20 px-6 bg-gradient-to-b from-violet-100 via-violet-50 to-white to-slate-50">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
 
         <div className="flex-1 flex flex-col gap-6">
@@ -23,8 +23,7 @@ export default function Impact() {
 
           <p className="text-[#475569] leading-relaxed">
             Milhões de pessoas convivem com sintomas sem respostas.
-            O LuminaRare nasceu para transformar essa realidade —
-            aproximando pessoas da informação, do acolhimento e das redes de apoio.
+            O LuminaRare nasceu para transformar essa realidade, aproximando pessoas da informação, do acolhimento e das redes de apoio.
           </p>
 
           <Link
